@@ -1,0 +1,5 @@
+# là để viết ghi chú
+# khi không muốn push cái gì lên github thì tạo ra file này
+# k push node_modules
+/node_modules
+/dist

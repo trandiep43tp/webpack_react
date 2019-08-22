@@ -1,0 +1,41 @@
+1 Tạo thư mục
+2 vào thư mục mở git bash here
+3 npm install init
+4 tạo các file index.html thư mục src webpack.config.js. trong thư mục src tạo file index.js
+5 install react react-dom --save
+6 cài và cấu hình webpack
+        1 npm install webpack --save-dev
+        2 npm install webpack-cli --save-dev
+        3 vào file webpack.config.js để thiết lập ban đâu
+                const path = require('path');
+                module.exports = {
+                    entry: './src/index.js',
+                    output: {
+                        filename: 'bundle.js',
+                        path: path.resolve(__dirname, 'dist')
+                    }
+                };
+7 vào file src/index.js viết câu lệnh console để in ra 
+8 vào file package.json tại scrip thay bằng  "build": "webpack"
+9 mở git bash đánh dòng lệnh npm run build sau đó mở index lên xem có log ra k
+
+npm install axios react-redux redux  --save
+npm install redux-thunk --save
+npm install react-router-dom --save
+npm install bootstrap jquery font-awesome --save
+
+
+BrowserRouter as Router thay bằng HashRouter trong app.js
+
+khi bị lỗi về referenceerror regeneratorruntime is not defined là do ansyn await không chạy
+ --> ta pải cài: npm install babel-polyfill --save-dev và trong webpack.config ta sửa thành: entry: ['babel-polyfill', './src/index.js'],
+ --> có thể cài npm install --save @babel/polyfill. khi file nào dùng ansyn await thì import "@babel/polyfill";
+
+
+ bundle.91d7617ba8fde46fe5b4.js   84.5 KiB  bundle  [emitted]  bundle
+vendor.91d7617ba8fde46fe5b4.js    2.6 MiB  vendor  [emitted]  vendor
+                    index.html  458 bytes          [emitted]
+
+bundle.017fa78d94289b2b2750.js   84.5 KiB  bundle  [emitted]  bundle
+vendor.017fa78d94289b2b2750.js    2.6 MiB  vendor  [emitted]  vendor
+                    index.html  458 bytes          [emitted]
